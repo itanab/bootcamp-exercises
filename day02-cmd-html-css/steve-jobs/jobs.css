@@ -1,0 +1,15 @@
+
+h1{
+    font-size: 1.8em;
+    font-family:'Linux Libertine','Georgia','Times',serif;
+    line-height: 1.3em;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: #0645ad;
+    background: none;
+}
+a:visited {
+    color:#0b0080;
+}
