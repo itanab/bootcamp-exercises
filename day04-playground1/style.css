@@ -3,7 +3,7 @@
 }
 html{
     font-family: 'Roboto normal';
-
+    scroll-behavior: smooth;
     font-size: 16px;
 }
 body{
@@ -20,6 +20,7 @@ body{
 .photo{
     background-image: url('graphics/banner.jpg');
     padding:12rem;
+    background-position: center cover;
     
 }
 .yellow{
@@ -41,6 +42,16 @@ body{
 }
 
 /*fonts and text*/
+
+.links{
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
 
 h1{
     font-family: 'Roboto Heavy';
@@ -69,11 +80,12 @@ p{
 .K{
     color:#223C88;
 }
-/*positioning*/
+/************************positioning*******************************/
 
 img{
-    height:10rem;
-    width: 10rem;
+    height:15rem;
+    width: 15rem;
+    padding:1rem;
 }
 
 .container2{
@@ -82,9 +94,20 @@ img{
     border-bottom: 4px solid white;
 }
 
-
 .container{
-    width:60rem;
+    width:55rem;
     position: relative;
     margin:0 auto;
+}
+
+.person{
+    padding-bottom: 3rem;
+    width:15rem;
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+}
+
+.adress{
+    width:15rem;
 }
