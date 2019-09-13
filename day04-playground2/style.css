@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'Woods';
+    src: url('graphics/FromtheWoods-Regular.woff2') format('woff2');
+}
+
+body, html{
+    height: 100%;
+    color: white;
+}
+body{
+    background-image: url('graphics/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/***************************positioning*********************************/
+
+.heading{
+    margin: 0 auto;
+}
+
+/*************************fonts/colors**********************************/
+
+h1{
+    font:'Woods';
+    color:white;
+}
