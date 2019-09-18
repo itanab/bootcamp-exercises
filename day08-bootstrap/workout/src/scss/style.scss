@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    margin:0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+
+    background-image: url('/img/coffee-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    
+    background-color: rgba(59, 49, 35, 0.5);
+
+    width:35%;
+    height:100vh;
+
+    color:white;
+    text-align: center;
+    font-family: 'Manjari', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding:5rem;
+
+    
+    
+    h1{
+           font-size: 3rem;
+           font-weight: bold;
+    }
+
+    p{
+        line-height: 1.5;
+        font-size: 1.5rem;
+    }
+    
+    button{
+        background-color: rgb(184, 18, 18);
+        color:white;
+        height: 5rem;
+        width: 14rem;
+
+        border-radius: 20px;
+           
+        font-size: 1.5rem;
+        margin-top:3rem;
+    }
+}
