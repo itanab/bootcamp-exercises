@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.white{
+    background: #cccccc;;
+    width:10vmin ;
+    height: 10vmin;
+    margin:2px;
+}
+
+.black{
+    background: black;
+    width:10vmin ;
+    height: 10vmin;
+    margin:2px;
+}
