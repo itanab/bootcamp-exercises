@@ -20,4 +20,4 @@ Turn your salary computing formula to a function called salary. The function wil
 Create another function called taxed_salary(), which will take two parameters - the basic salary and the tax. Let it return a salary after applying the tax.*/
 
 const salary = (pay, hours, days) => pay * hours * days;
-const taxedSalary = (salary, tax) => salary * tax;
+const taxedSalary = (salary, tax) => salary * (1 - tax);
