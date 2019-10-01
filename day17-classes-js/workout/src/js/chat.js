@@ -197,8 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
   for (const convo of conversation) {
     const html = (
       `<div class="${convo.side}">
+      
       <div class="text">${convo.text}</div>
       <img src="img/${convo.name}.png">
+     
     </div>`
     );
 
