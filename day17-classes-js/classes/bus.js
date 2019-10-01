@@ -29,7 +29,7 @@ class Bus {
     };
 
     next(){
-        this.last_station++;
+       this.last_station ++;
     }
 
     board(count){
@@ -50,3 +50,13 @@ class Bus {
 
     }
 }
+
+const buses = [
+    b1 = new Bus ('Vienna', ['Praha', 'Jihlava', 'Brno', 'Břeclav', 'Vídeň'],50,0,0),
+    b2 = new Bus ('Vienna', ['Praha', 'Jihlava', 'Brno', 'Břeclav', 'Vídeň'],30,10,3),
+];
+
+b1.current(); //ok - returns Praha
+b1.board(20); //ok - adds all 20
+b1.board(40); //ok - adds only 30 out of 40
+b1.unboard(10); //ok -unboards only 10
