@@ -25,7 +25,7 @@ class Bus {
     uboard(count) unboard count passengers from the bus. If the count is greater then the number of  passengers in the bus just unboard those that are inside. */    
 
     current(){
-        return this.last_station;
+        return this.stations[this.last_station];
     };
 
     next(){
