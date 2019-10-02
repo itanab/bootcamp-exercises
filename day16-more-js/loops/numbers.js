@@ -113,11 +113,13 @@ const predecessor = (numbers) =>{
 /*Output all the peaks in the array. A peak is a number whose predecessor and succesor are both smaller then the number itself.  */
 
 const peak = (numbers) => {
+    let peaks = [];
     for(let i=1; i<numbers.length-1; i++){
         if(numbers[i] > numbers[i+1] && numbers[i] > numbers[i-1]){
-            console.log(numbers[i]);
+            peaks.push(numbers[i]);
         }
     }
+    return peaks;
 
 };
 
@@ -133,18 +135,127 @@ const countNeg = (numbers) => {
 /* Compute the sum of all the numbers in the array. Answer: 70 */
  //NOT WORKING
 const sumTootal = (numbers) => {
-    const sum=0;
-    for (const i = 0; i < numbers.length; i++){
+    let sum=0;
+    for (let i = 0; i < numbers.length; i++){
         sum = sum + numbers[i];
     }
 
     return sum;
 };
 
+/*Compute the average of the numbers in the array. Answer: 3.68421... */
+const avg = (numbers) => {
+    const sum = sumTootal(numbers);
+    const nbTotal = numbers.length;
+    const avg = sum/nbTotal;
+    return avg;
+};
+
+/* Compute the sum of all the positive numbers in the array.*/
+
+const positivSum = (numbers) => {
+    let sum = 0;
+    for(const number of numbers){
+        if(number > 0){
+            sum+=number;
+        }
+    }
+    return sum;
+};
 
 
+/* First, compute the average number in the array and save the result in variable. Then compute the sum of squared differences from the average. Answer: 6188.1052...*/
+
+
+
+
+
+/*Compute the variance of the array. Variance is the average of squared differences from the average. Answer: 325.6897... */
+
+
+
+/*_______________________________ Searching___________________________________*/
+
+
+
+/* Find the length of the longest ascending sequence of consecutive numbers in the array.*/
 /*
-Compute the average of the numbers in the array. Answer: 3.68421...
-Compute the sum of all the positive numbers in the array.
-First, compute the average number in the array and save the result in variable. Then compute the sum of squared differences from the average. Answer: 6188.1052...
-Compute the variance of the array. Variance is the average of squared differences from the average. Answer: 325.6897... */
+const number =[2,1,5,9,8,9];
+
+
+const ascending = (number) => {
+    let length = 1;
+    
+
+    for (let i=0; i<number.length; i++){
+        if(number[i] < number[i+1]){
+            length++;
+        }else{
+            
+
+        }
+
+    }
+
+    return length;
+
+};
+*/
+
+
+/*Find the longest sequence of consecutive numbers which is either ascending or descending.*/
+
+
+
+
+/*Find the biggest element in the array*/
+
+const biggestElm = (numbers) => {
+    const sorted = numbers.sort((a, b) => a - b);
+    return sorted[numbers.length-1];
+};
+
+/* Find the second biggest element in the array. */
+
+const secBiggestElm = (numbers) => {
+    const sorted = numbers.sort((a, b) => a - b);
+    return sorted[numbers.length-2];
+};
+
+
+/*Find the lowest peak and the ?????????????highest valley in the array.*/
+
+const peakValley = (numbers) => {
+    const peaks = peak(numbers);
+    let lowestPeak = peaks[0];
+    for (const peak of peaks){
+        if(lowestPeak > peak){
+            lowestPeak = peak;
+        };
+    };
+    return lowestPeak;
+};
+
+
+
+/*___________________________- Transformation______________________ */
+
+
+/*From the original array create a new array with a reversed order of the elements.*/
+
+const reverse =(numbers) => {
+    const reversed =[];
+    for (let i=numbers.length-1; i>=0; i--){
+        reversed.push(numbers[i]);
+    }
+    return reversed;
+};
+
+
+/* From the original array create a new array with the elements randomly shuffled. Use the Math.random method to help you with randomness. */
+
+
+
+
+/*From the original array create a new array with the elements sorted from lowest to highest.*/
+
