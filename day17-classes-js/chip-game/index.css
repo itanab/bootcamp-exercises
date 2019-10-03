@@ -27,7 +27,7 @@ body{
     box-shadow: 4px 4px 4px;
 }
 
-.chip{
+#chip{
     background-color: rgb(255, 166, 0);
     color:white;
 
@@ -44,7 +44,7 @@ body{
 
     position: absolute;
     top:40%;
-    left:30%;
+    left:40%;
     
 }
 

@@ -1,3 +1,5 @@
+import { runInThisContext } from "vm";
+
 /*
 Now think about the entire game in terms of objects. What in the game can be represented as an object?
 
@@ -44,10 +46,27 @@ It will handle displaying the chip within the game field based on it's propertie
     constructor(value, x, y){
         this.value = value;
         this.x = x;
-        
         this.y = y;
     }
+
     render (){
+        this.element = document.createElement('div');
+        this.element.className = 'chip';
+        this.element.innerHTML = (
+            `<div id="chip">1</div>`
+        );
+        
+        const clickChip = this.element.querySelector('#chip');
+        clickChip.addEventListener('click', () => {
+        clickChip.style.display = ('none');
+        });
+
+        }
+
+        mount(parent){
+            this.render();
+            parent.appendChild(this.element);
+        }
 
     }
-}
+
