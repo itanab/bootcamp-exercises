@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.querySelector('#reset');
     resetBtn.addEventListener('click', () => {
         timer.reset();
-        //timer.clear();
+        timer.clear();
         update();  
     });
     
