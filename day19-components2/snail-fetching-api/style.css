@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+body{
+  margin:0px;
+}
+.nav{
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.container{
+  padding-top:3rem;
+  margin-right: 4rem;
+  border-right: 4px solid red;
+  height: 100vh;
+}
+button{
+  text-align: center;
+  background-color:rgb(24, 182, 24);
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+  padding-left:2rem;
+  padding-right: 2rem;
+  border: none;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+
+.snail-racer {
+  width: 160px;
+}
+
+.snail {
+  width: 100%;
+  height: auto;
+}
+
+.snail__body {
+  fill: #000000;
+}
+
+.snail__shell {
+  fill: rgb(246, 140, 140);
+}
+
+.snail-racer__name {
+  font-weight: bold;
+  text-align: center;
+  font-size: 120%;
+}
