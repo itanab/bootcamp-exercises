@@ -25,6 +25,35 @@ $movie_names = [
     'tt0137523' => 8.8
   ];
 
+  $names_ratings = [];
+  $final=[];
+
+  foreach ($movie_names as $id1 => $name){
+      foreach ($movie_ratings as $id2 => $ratings){
+          if ($id1 === $id2){
+            $names_ratings['name']=$name;
+            $names_ratings['rating']=$ratings;
+            $object = (object) $names_ratings;
+            array_push($final, $object);
+        }
+      }
+  }
+ 
+  header('Content-type: application/json');
+
+  //sort($final);
+  usort($final, function($a, $b){
+    if($a->rating > $b->rating){
+      return 1;
+    }elseif($a->rating < $b->rating){
+      return -1;
+    }else{
+      return 0;
+    }
+  });
+
+  echo json_encode($final);
+
+
 
   ?>
-  
