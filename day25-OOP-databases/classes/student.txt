@@ -1,0 +1,17 @@
+Student
+
+idNb: integer
+
+name: short string
+surname: short string
+email: short string
+adress:long string
+date of birth: date
+
+program of study: short string
+year of study: integer
+gpa:decimal number
+mentor: short string
+scholarship:boolean
+nationality: short string
+insurance-number: short strings
