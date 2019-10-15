@@ -43,3 +43,8 @@ class Region
         ]);
     }
 }
+
+
+/*It will run a SQL query to delete this particular record (using the primary key to identify it).
+Test it with any available region record:
+$region->delete(); */
