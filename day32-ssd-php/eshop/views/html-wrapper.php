@@ -1,3 +1,15 @@
+<?php
+
+if(isset($_GET['product_id'])){
+    $layout= 'product';
+}elseif(isset($_GET['category_id'])){
+    $layout = 'category';
+}else{
+    $layout = 'homepage';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +33,8 @@
         <div id="content">
 
             <!-- homepage/layout -->
-            <?php
-
-            if(isset($_GET['product_id'])){
-                $layout= 'product';
-            }elseif(isset($_GET['category_id'])){
-                $layout = 'category';
-            }else{
-                $layout = 'homepage';
-            }
-
-            include "{$layout}/layout.php" ?>   
+         
+            <?php include "{$layout}/layout.php" ?>   
 
         </div>
 
