@@ -8,6 +8,7 @@ h1{
 }
 
 .form{
+    margin: 2rem;
     .movie{
         display: flex;
         flex-direction: column;
@@ -15,5 +16,14 @@ h1{
             max-width: 200px;
             max-height: auto;
         }
+    }
+}
+
+.favorite{
+    margin-left: 2rem;
+    input{
+        background-color: pink;
+        border-radius: 30px;
+
     }
 }

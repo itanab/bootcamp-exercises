@@ -10,8 +10,8 @@ export default class MovieFavorite extends React.Component{
         super(props);
 
         this.state = {
-            favorite=null
-        }
+            favorite: null
+        };
     }
 
     componentDidMount = () => {
@@ -19,14 +19,47 @@ export default class MovieFavorite extends React.Component{
         .then(response => response.json())
         .then(json_data => {
             this.setState({
-                movie_data: json_data
+                favorite: json_data.favorite
+            })
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        //runs another AJAX request with post
+        fetch('http://www.laravel.test:8080/api/movies/favorite/toggle',{
+            method: 'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body: JSON.stringify({
+                "movie_id": this.props.movie_id,
+                "user_id": 1,
+
+            })
+        })
+        .then(response => response.json())
+        .then(json_data => {
+            this.setState({
+                favorite: json_data.data.favorite
             })
         })
     }
 
     render (){
-        return <div className="fav">
-            <h1>favorite</h1>
-        </div>
-    }
+        //label for the submit button
+        let label ='Favorite this movie';
+        
+        if(this.state.favorite){
+            label= 'Unfavorite this movie';
+        }
+        return (
+
+            <div className="favorite">
+                <form action="" method="get" onSubmit={ this.handleSubmit }>
+                        <button> { label } </button>
+                </form>
+            </div>
+    )}
 }
