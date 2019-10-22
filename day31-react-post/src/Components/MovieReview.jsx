@@ -9,7 +9,9 @@ export default class MovieReview extends React.Component{
         this.movie_id = 488;
         this.state = {
             movie_data: null,
-            text: ''
+            text: '',
+            rating: '',
+            
         }
     }
 
@@ -34,9 +36,10 @@ export default class MovieReview extends React.Component{
                 'Content-type':'application/json'
             },
             body: JSON.stringify({
-                "movie_id": 488,
+                "movie_id": this.movie_id,
                 "user_id": 1,
-                "text": this.state.text
+                "text": this.state.text,
+                "ratign": this.state.rating
             })
         })
            
@@ -44,8 +47,17 @@ export default class MovieReview extends React.Component{
     }
 
     handleTextChange = (event) => {
+        //let text = event.target.value.replace('fuck', ':)');
         this.setState({
+
             text: event.target.value
+        })
+    }
+
+    handleRatingChange = (event) => {
+        let value = Math.max(0, Math.min(10, event.target.value));
+        this.setState({
+            rating: value
         })
     }
 
@@ -66,7 +78,15 @@ export default class MovieReview extends React.Component{
             <div className="form">
                 { movie }
                 <form action="" method="post" onSubmit={ this.handleSubmit }>
-                    <input type="text" name="text" value={ this.state.text } onChange={ this.handleTextChange } />
+
+                    <label htmlFor="">Text:</label><br />
+                    <textarea name="text" cols="30" rows="10" value={ this.state.text } onChange={ this.handleTextChange }></textarea> 
+                    <br />
+                    <br />
+                    <label htmlFor="">Text:</label><br />
+                    <input type="number" name="rating" value={ this.state.rating } onChange={ this.handleRatingChange } />
+                    <br />
+
                     <input type="submit" value="Submit" />
                 </form>
             </div>
